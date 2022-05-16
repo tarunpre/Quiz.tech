@@ -68,6 +68,59 @@ let questions = [
        "None"
     ]
    },
+
+   {
+    numb: 7,
+    question: "Output ?<br>s = 0<br>for d in range(0, 5, 0.1):<br>&nbsp;&nbsp;&nbsp;&nbsp;s += d<br>&nbsp;&nbsp;&nbsp;&nbsp;print(s)",
+      answer: "Type Error",
+ 
+    options: [
+      "Syntax Error",
+      "Type Error",
+      "Name Error",
+      "Traceback Error"
+   ]
+  },
+
+  {
+    numb: 8,
+    question: "Output ?<br>max('please help')",
+      answer: "s",
+ 
+    options: [
+      "please help",
+      "Error",
+      "p",
+      "s"
+   ]
+  },
+
+  {
+    numb: 9,
+    question: "Output ?<br>i is a/an _______?<br>i = (2)",
+      answer: "Int",
+ 
+    options: [
+      "String",
+      "Tuple",
+      "Int",
+      "Boolean"
+   ]
+  },
+
+  {
+    numb: 10,
+    question: "Suppose a tuple test contains 5 elements.<br>How can you set the 3rd element of the tuple to 'Python'?",
+      answer: "Elements of tuple cannot be changed",
+ 
+    options: [
+      "test[2] = 'Python'",
+      "test[3] = 'Python'",
+      "test(2) = 'Python'",
+      "Elements of tuple cannot be changed"
+   ]
+  },
+
 ];
 //selecting all required elements
 const start_btn = document.querySelector(".start_btn button");
@@ -97,11 +150,11 @@ continue_btn.onclick = () => {
   quiz_box.classList.add("activeQuiz"); //show quiz box
   showQuetions(0); //calling showQestions function
   queCounter(1); //passing 1 parameter to queCounter
-  startTimer(100); //calling startTimer function
+  startTimer(60); //calling startTimer function
   startTimerLine(0); //calling startTimerLine function
 };
 
-let timeValue = 100;
+let timeValue = 60;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -302,7 +355,7 @@ function startTimer(time) {
 }
 
 function startTimerLine(time) {
-  counterLine = setInterval(timer, 180);
+  counterLine = setInterval(timer, 105);
   function timer() {
     time += 1; //upgrading time value with 1
     time_line.style.width = time + "px"; //increasing width of time_line with px by time value
